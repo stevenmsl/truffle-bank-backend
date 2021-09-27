@@ -79,6 +79,14 @@ contract(
           );
         }
       });
+
+      it("emits transfer and approval events successfully", async () => {
+        let res = await tether.transfer(Steven, tokens("1000"));
+        expect(res.logs[0].event).to.equal("Transfer");
+        /* allow bank to transfer up to 100 Tether */
+        res = await tether.approve(bank, tokens("100"), { from: Steven });
+        expect(res.logs[0].event).to.equal("Approval");
+      });
     });
   }
 );
