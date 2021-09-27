@@ -1,0 +1,8 @@
+- define local network #02-01
+
+- specify contracts build directory #02-02
+  - this will allow the npm scrip generate-types to read 
+    the contract json files and then creates the TS types
+    for them
+
+- specify which version of solc compiler to use #02-03

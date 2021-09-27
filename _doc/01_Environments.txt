@@ -1,0 +1,19 @@
+- Prerequisites
+  - Ganache is installed locally and is up and running
+
+- npm scripts
+  - posinstall and compile
+    - these two scripts are the same
+    - posinstall will be executed automatically after you ran "npm install"
+    - you should run compile every time you modify any contracts
+      - this will make sure the content of the "types" folder is up to date   
+  - prettier     
+    - format your solidity code
+  - deploy-dev
+    - deploy to the local Ganache  
+
+- run tests
+  - make sure Ganache is up and running locally
+  - command:  truffle test
+  
+   
