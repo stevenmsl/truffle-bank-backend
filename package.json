@@ -10,7 +10,10 @@
     "generate-types": "npx typechain --target=truffle-v5 ./truffle_abis/*.json",
     "postinstall": "truffle compile && npm run generate-types",
     "compile": "truffle compile && npm run generate-types",
+    "test": "truffle test",
+    "test-redeploy": "npm run deploy-dev-clean && npm run test",
     "deploy-dev": "truffle deploy --network development --reset",
+    "deploy-dev-clean": "truffle networks --clean && npm run deploy-dev",
     "prettier": "prettier --write ./contracts/**/*.sol"
   },
   "author": "",

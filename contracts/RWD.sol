@@ -6,9 +6,9 @@ pragma solidity ^0.8.0;
     why the methods are implemented in a certain way
 */
 
-contract Tether {
-    string public name = "Mock Tether Token";
-    string public symbol = "mUSDT";
+contract RWD {
+    string public name = "Reward Token";
+    string public symbol = "RWD";
     /* 1 million tokens */
     uint256 public totalSupply = 1000000000000000000000000;
     uint8 public decimals = 18;

@@ -1,0 +1,44 @@
+- command: truffle networks
+  - this show you what contracts have been deployed to
+    what networks
+
+- command: truffle networks --clean
+  - this will only remove all network artifacts 
+    that aren't associated with a named network.
+
+  - so in your truffle-config.js, if you specify
+    a partiuclar network id, artifacts won't be
+    remove from that network as it's named:
+     development: {
+      host: "127.0.0.1",
+      port: 7545,
+      network_id: "5777",
+    },
+
+  - since I can't find any command to remove 
+    artifacts from a named network, just keep
+    the network_id: "*" if you want to remove 
+    all the contracts you deployed not just
+    replace them.
+
+  - this command will also clean up the networks
+    property in the contract JSON files located in the
+    truffle_abis folder: 
+    "networks": {},  
+
+- deploying contracts
+  - command: npm run deploy-dev
+  - the networks property in the JSON file of the deployed
+    contracts will be modified accordingly:
+    "networks": {
+        "5777": {
+        "events": {},
+        "links": {},
+        "address": "0xF147F34dB34258A832cE380b4490e9208357570e",
+        "transactionHash": "0x323759f5503582b0a8cfd7e38d77d7c8646d31b989f55b04ca8a602daf33fa90"
+        }
+    }
+  - from this point onward if you don't remove the artifacts you are
+    just replacing the contracts that has new address every time 
+    you run "npm run deploy-dev" 
+

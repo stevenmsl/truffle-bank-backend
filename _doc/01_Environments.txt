@@ -10,10 +10,23 @@
   - prettier     
     - format your solidity code
   - deploy-dev
-    - deploy to the local Ganache  
+    - deploy to the local Ganache
+  - deploy-dev-clean
+    - remove all contracts before deploy them
+    - this to work, it requires the network_id to set 
+      to * in the truffle-config.js  
+        development: {
+        host: "127.0.0.1",
+        port: 7545,
+        network_id: "*",
+      }, 
 
 - run tests
   - make sure Ganache is up and running locally
-  - command:  truffle test
+  - command: npm run test
+  - command: npm run test-redeploy
+    - this will re-deploy all contracts before
+      running the tests
+
   
    
