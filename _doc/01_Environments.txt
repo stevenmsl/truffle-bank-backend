@@ -1,5 +1,6 @@
 - Prerequisites
   - Ganache is installed locally and is up and running
+  - Truffle is installed globally
 
 - npm scripts
   - posinstall and compile
